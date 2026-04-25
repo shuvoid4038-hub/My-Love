@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("rm373batch15-bg-11.jpg")
+        no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Modal ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.0);
+    z-index: 999;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 35px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* ===== Login Box ===== */
+.login-box {
+    width: 340px;
+    padding: 50px 30px;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(10, 30, 60, 0.85),
+        rgba(20, 60, 120, 0.75)
+    );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 0 30px rgba(0, 170, 255, 0.25),
+        inset 0 0 20px rgba(255,255,255,0.05);
+
+    color: #ffffff;
+    position: relative;
+}
+
+
+
+/* Company name */
+.company-name h1 {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+
+
+/* Login title */
+.login-box h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+
+/* Label */
+.login-box input[type="tel"] {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* Input */
+.login-box input[type="tel"] {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.login-box input::placeholder {
+    color: #d0e6ff;
+}
+
+.login-box input:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 10px rgba(0,191,255,0.6);
+}
+
+
+/* Submit Button */
+#submit-button {
+    width: 100%;
+    padding: 13px;
+    border-radius: 14px;
+
+    background: transparent;
+    border: 1px solid #ffffff;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(0,191,255,0.5);
+}
+
+#submit-button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+
+
+/* Footer info */
+.footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #d0e9ff;
+}
+
+.footer a {
+    color: #66ccff;
+    text-decoration: none;
+}
+

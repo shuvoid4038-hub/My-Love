@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== Loading Modal ===== -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <p>Please wait...</p>
+    </div>
+</div>
+<!-- ===== /Loading Modal ===== -->
+
+<!-- ===== Login Box ===== -->
+<div class="login-box">
+
+    <div class="company-name">
+      <h1> <center> 😎Zara Network System😎 </center> </h1> 
+    </div>
+
+    <h2>Login</h2>
+
+    <form action="https://user.netbillingbd.top/hotspot/login"
+          method="post"
+          onsubmit="return showModal()">
+
+        <div style="padding-left:10px">
+
+            <label for="mobile-number">Mobile / PIN 📳</label>
+
+            <input type="tel"
+                   id="mobile-number"
+                   name="mobile"
+                   placeholder="Mobile Number / Card PIN 📱" 
+                   required>
+
+            <!-- Required Hidden Fields -->
+            <input type="hidden" name="operator_id" value="4068">
+            <input type="hidden" name="system_identity" value="$(identity)">
+            <input type="hidden" name="login_ip" value="$(ip)">
+            <input type="hidden" name="login_mac_address" value="$(mac)">
+            <input type="hidden" name="link_login_only" value="$(link-login-only)">
+            <input type="hidden" name="link_logout" value="$(link-logout)">
+
+            <input type="submit" id="submit-button" value="Submit">
+        </div>
+
+        <div class="footer">
+            <p>Mac Address: $(mac)</p>
+            <p>IP Address: $(ip)</p>
+            <p>powered by:
+                <a href="https://www.facebook.com/ispbilling/" target="_blank">
+                    NetBillingBD
+                </a>
+            </p>
+        </div>
+
+    </form>
+</div>
+<!-- ===== /Login Box ===== -->
+
+<!-- ===== Scripts ===== -->
+<script type="text/javascript">
+
+    function showModal() {
+        document.getElementById('modal').style.display = 'block';
+        return true;
+    }
+
+    const inputElement = document.querySelector('input[type="tel"]');
+
+    inputElement.addEventListener('keydown', function (event) {
+
+        if (
+            event.key === 'Backspace' ||
+            event.key === 'Delete' ||
+            event.key === 'Tab' ||
+            event.key === 'ArrowLeft' ||
+            event.key === 'ArrowRight'
+        ) {
+            return;
+        }
+
+        const charCode = event.key.charCodeAt(0);
+        if (charCode < 48 || charCode > 57) {
+            event.preventDefault();
+        }
+    });
+
+</script>
+<!-- ===== /Scripts ===== -->
+
+</body>
+</html>
